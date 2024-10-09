@@ -1,5 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import Home from '@/views/Home.vue';
+import About from '@/views/About.vue';
+import Projects from '@/views/Projects.vue';
+import Contact from '@/views/Contact.vue';
 
 const routes = [
   {
@@ -7,11 +10,25 @@ const routes = [
     name: 'Home',
     component: Home
   },
-  // Możesz dodać kolejne trasy tutaj
+  {
+    path: '/about',
+    name: 'About',
+    component: About
+  },
+  {
+    path: '/projects',
+    name: 'Projects',
+    component: Projects
+  },
+  {
+    path: '/contact',
+    name: 'Contact',
+    component: Contact
+  }
 ];
 
 const router = createRouter({
-  history: createWebHistory(), // Lub createWebHashHistory() jeśli używasz hash mode
+  history: createWebHistory(),
   routes
 });
 
